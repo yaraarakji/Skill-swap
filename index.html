@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skill Swap – LAU Students</title>
+  <title>Skill Swap – LAU</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,74 +15,63 @@
       --primary-soft: rgba(91, 62, 228, .08);
       --text: #1f2937;
       --muted: #6b7280;
-      --radius: 1.2rem;
+      --radius: 1.1rem;
     }
-
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
       line-height: 1.6;
     }
-
     /* NAVBAR */
     .navbar {
       position: sticky;
       top: 0;
-      z-index: 20;
-      background: rgba(245, 246, 251, 0.9);
+      z-index: 50;
+      background: rgba(245,246,251,0.85);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(0,0,0,.03);
+      border-bottom: 1px solid rgba(0,0,0,.04);
     }
     .nav-inner {
       max-width: 1100px;
       margin: 0 auto;
-      padding: .6rem 1.2rem;
+      padding: .5rem 1.2rem;
       display: flex;
       align-items: center;
-      justify-content: space-between;
       gap: 1rem;
     }
-    .brand {
+    .logo-wrap {
       display: flex;
       align-items: center;
       gap: .5rem;
-      font-weight: 700;
-    }
-    .brand-badge {
-      width: 30px;
-      height: 30px;
-      border-radius: .9rem;
-      background: var(--primary);
-      color: #fff;
-      display: grid;
-      place-items: center;
-      font-size: .7rem;
     }
     .nav-links {
       display: flex;
       gap: 1rem;
+      margin-left: 1rem;
     }
     .nav-links a {
       text-decoration: none;
       color: var(--text);
-      font-size: .85rem;
+      font-size: .82rem;
       font-weight: 500;
     }
-    .nav-btn {
-      background: var(--primary);
-      color: #fff;
-      border: none;
-      padding: .4rem .9rem;
-      border-radius: .7rem;
-      font-weight: 600;
-      font-size: .75rem;
+    .team-names {
+      margin-left: auto;
+      font-size: .6rem;
+      color: var(--muted);
+      text-align: right;
+      line-height: 1.2;
+    }
+    .theme-btn {
+      background: transparent;
+      border: 1px solid rgba(91,62,228,.3);
+      border-radius: .65rem;
+      padding: .25rem .6rem;
+      font-size: .65rem;
+      margin-left: .5rem;
       cursor: pointer;
     }
 
@@ -93,7 +82,7 @@
       padding: 0 1.2rem;
       display: grid;
       grid-template-columns: 1.1fr .9fr;
-      gap: 1.8rem;
+      gap: 1.5rem;
       align-items: center;
     }
     .badge {
@@ -102,27 +91,15 @@
       gap: .4rem;
       background: var(--primary-soft);
       color: var(--primary);
-      padding: .35rem .75rem;
+      padding: .35rem .8rem;
       border-radius: 999px;
       font-size: .7rem;
       font-weight: 600;
       margin-bottom: 1rem;
     }
-    h1 {
-      font-size: clamp(2.1rem, 3vw, 2.7rem);
-      line-height: 1.1;
-      margin-bottom: .9rem;
-    }
-    .hero p {
-      color: var(--muted);
-      margin-bottom: 1.4rem;
-      max-width: 32rem;
-    }
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .7rem;
-    }
+    h1 { font-size: clamp(2.15rem, 3vw, 2.7rem); margin-bottom: .8rem; }
+    .hero p { color: var(--muted); margin-bottom: 1.1rem; }
+    .actions { display: flex; gap: .6rem; flex-wrap: wrap; }
     .btn-primary {
       background: var(--primary);
       color: #fff;
@@ -133,12 +110,12 @@
       cursor: pointer;
       text-decoration: none;
       display: inline-flex;
+      gap: .3rem;
       align-items: center;
-      gap: .35rem;
     }
     .btn-secondary {
       background: transparent;
-      border: 1px solid rgba(91,62,228,.3);
+      border: 1px solid rgba(91,62,228,.25);
       color: var(--primary);
       border-radius: .8rem;
       padding: .55rem 1rem;
@@ -147,57 +124,28 @@
     }
     .hero-card {
       background: var(--card);
-      border-radius: 1.3rem;
-      padding: 1.1rem 1.1rem 1.3rem;
-      box-shadow: 0 24px 60px rgba(0,0,0,.04);
-      border: 1px solid rgba(91,62,228,.05);
-    }
-    .hero-card h2 {
-      font-size: 1rem;
-      margin-top: 0;
-    }
-    .hero-card label {
-      display: block;
-      font-size: .75rem;
-      font-weight: 500;
-      margin-top: .6rem;
-    }
-    .hero-card input {
-      width: 100%;
-      background: #f3f4f6;
+      border-radius: 1rem;
+      padding: 1.1rem 1rem 1.3rem;
       border: 1px solid rgba(0,0,0,.03);
-      border-radius: .6rem;
-      padding: .5rem .55rem;
-      margin-top: .25rem;
-      font-family: inherit;
+      box-shadow: 0 24px 50px rgba(0,0,0,.03);
     }
-    .hero-card small {
-      font-size: .65rem;
-      color: var(--muted);
-      display: block;
-      margin-top: .4rem;
+    .hero-card h2 { font-size: 1rem; margin-top: 0; }
+    .hero-card label { font-size: .7rem; font-weight: 500; display: block; margin-top: .6rem; }
+    .hero-card input {
+      width: 100%; background: #f3f4f6; border: 1px solid rgba(0,0,0,.02);
+      border-radius: .6rem; padding: .5rem .5rem; margin-top: .2rem;
     }
+    .hero-card small { font-size: .65rem; color: var(--muted); display: block; margin-top: .4rem; }
 
     /* SECTIONS */
-    section {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 1.2rem;
-    }
-    .section-title {
-      font-size: 1.4rem;
-      margin-bottom: .4rem;
-    }
-    .section-sub {
-      color: var(--muted);
-      margin-bottom: 1.2rem;
-    }
+    section { max-width: 1100px; margin: 0 auto; padding: 0 1.2rem; }
+    .section-title { font-size: 1.3rem; margin-top: 2.8rem; margin-bottom: .4rem; }
+    .section-sub { color: var(--muted); margin-bottom: 1.3rem; }
 
     .why-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
       gap: 1rem;
-      margin-bottom: 2.2rem;
     }
     .why-card {
       background: var(--card);
@@ -205,99 +153,166 @@
       padding: 1rem;
       border: 1px solid rgba(0,0,0,.02);
     }
-    .why-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: .7rem;
-      background: var(--primary-soft);
-      color: var(--primary);
-      display: grid;
-      place-items: center;
-      font-weight: 700;
-      margin-bottom: .5rem;
-    }
+    .why-card h3 { margin-top: .5rem; }
 
     /* SKILL BOARD */
-    .skill-board {
+    .board-wrap {
       background: var(--card);
       border-radius: 1rem;
-      overflow: hidden;
       border: 1px solid rgba(0,0,0,.02);
-      margin-bottom: 2.5rem;
+      overflow: hidden;
+      margin-bottom: 2rem;
     }
-    .skill-board-head {
-      background: #f0ecff;
-      padding: .9rem 1rem;
+    .board-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: .8rem;
+      background: #f0ecff;
+      padding: .8rem 1rem;
     }
-    .skill-row {
+    .board-search {
+      padding: .4rem .5rem;
+      border-radius: .4rem;
+      border: 1px solid rgba(0,0,0,.05);
+      font-size: .7rem;
+    }
+    .board-row {
       display: grid;
-      grid-template-columns: 1.2fr 1.2fr .6fr;
+      grid-template-columns: 1.1fr 1.1fr .4fr;
       gap: .6rem;
       padding: .6rem 1rem;
-      border-bottom: 1px solid rgba(0,0,0,.02);
-      font-size: .8rem;
+      border-bottom: 1px solid rgba(0,0,0,.01);
+      font-size: .78rem;
       align-items: center;
     }
     .tag {
       display: inline-block;
       background: rgba(91,62,228,.1);
       color: var(--primary);
-      padding: .2rem .6rem;
+      padding: .2rem .55rem;
       border-radius: 999px;
-      font-size: .67rem;
-      font-weight: 600;
+      font-size: .65rem;
       text-align: center;
+      font-weight: 600;
     }
 
-    /* FOOTER */
+    /* TEAM */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 1rem;
+    }
+    .team-card {
+      background: var(--card);
+      border-radius: .9rem;
+      padding: 1rem;
+      border: 1px solid rgba(0,0,0,.02);
+    }
+
+    /* TESTIMONIALS */
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .testi-card {
+      background: var(--card);
+      border-radius: .9rem;
+      padding: 1rem;
+      border: 1px solid rgba(0,0,0,.02);
+      font-size: .8rem;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      background: var(--card);
+      border-radius: 1rem;
+      padding: 1rem;
+      border: 1px solid rgba(0,0,0,.02);
+      max-width: 500px;
+      margin-bottom: 3rem;
+    }
+    .contact-box input, .contact-box textarea {
+      width: 100%;
+      padding: .5rem .55rem;
+      border: 1px solid rgba(0,0,0,.03);
+      border-radius: .6rem;
+      margin-top: .35rem;
+      font-family: inherit;
+    }
+
+    /* FLOATING BTN */
+    .float-btn {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: .6rem 1rem;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(91,62,228,.35);
+      cursor: pointer;
+    }
+
     footer {
       text-align: center;
       padding: 2.5rem 1.2rem 3rem;
       color: var(--muted);
-      font-size: .75rem;
+      font-size: .7rem;
     }
 
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-      .nav-links {
-        display: none;
-      }
-      .skill-row {
-        grid-template-columns: 1fr;
-      }
+    /* DARK MODE */
+    .dark {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+    }
+
+    @media (max-width: 880px) {
+      .hero { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .board-row { grid-template-columns: 1fr; }
+      .team-names { display: none; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
+  <!-- NAVBAR WITH LOGO + NAMES -->
   <div class="navbar">
     <div class="nav-inner">
-      <div class="brand">
-        <div class="brand-badge">SS</div>
-        Skill Swap
+      <div class="logo-wrap">
+        <!-- inline SVG logo -->
+        <svg width="120" height="38" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" style="height:38px;">
+          <circle cx="30" cy="30" r="26" fill="#5B3EE4" />
+          <path d="M22 23C23.8 18.5 29 16.5 33.5 18.3C36 19.3 37.9 21.5 38.6 23.9L41.5 22.2C41.9 22 42.3 22.3 42.2 22.7L40.8 28.3C40.7 28.7 40.3 28.9 39.9 28.8L34.3 27.4C33.9 27.3 33.9 26.7 34.3 26.5L37.1 25C36.5 23.5 35.4 22.1 33.8 21.5C31.1 20.4 28 21.6 26.8 24.3C26.6 24.7 26 24.8 25.5 24.6L23 23.5C22.5 23.3 21.8 23.2 22 23Z" fill="white"/>
+          <path d="M38 36.7C36.2 41.2 31 43.2 26.5 41.4C24 40.4 22.1 38.2 21.4 35.8L18.5 37.5C18.1 37.7 17.7 37.4 17.8 37L19.2 31.4C19.3 31 19.7 30.8 20.1 30.9L25.7 32.3C26.1 32.4 26.1 33 25.7 33.2L22.9 34.7C23.5 36.2 24.6 37.6 26.2 38.2C28.9 39.3 32 38.1 33.2 35.4C33.4 35 34 34.9 34.5 35.1L37 36.2C37.5 36.4 38.2 36.5 38 36.7Z" fill="#C7F2CB"/>
+          <text x="65" y="25" fill="#1F2937" font-size="14" font-weight="700" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">Skill Swap</text>
+        </svg>
       </div>
       <div class="nav-links">
+        <a href="#about">About</a>
         <a href="#how">How it works</a>
-        <a href="#board">Skill Board</a>
-        <a href="#sdg">SDGs</a>
+        <a href="#board">Skill board</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
       </div>
-      <button class="nav-btn" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">Join</button>
+      <div class="team-names">
+        Yara Arakji · Nour Issa<br>Omar Rifaii · Samir Aridi
+      </div>
+      <button class="theme-btn" onclick="toggleTheme()">Theme</button>
     </div>
   </div>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="top">
     <div>
-      <div class="badge">LAU Project · Fall 2025</div>
-      <h1>Trade time, build skills, grow together.</h1>
-      <p>A campus-first platform where LAU students exchange skills instead of paying money. You teach for 1 hour → you earn 1 hour to learn from someone else.</p>
+      <div class="badge">LAU · Project Sharks prototype</div>
+      <h1>Trade what you know. Learn what you don’t.</h1>
+      <p>Skill Swap is a peer-to-peer skill exchange platform for LAU students. No money — just time credits.</p>
       <div class="actions">
         <a href="#join" class="btn-primary">Join the pilot →</a>
         <a href="#board" class="btn-secondary">View Skill Board</a>
@@ -308,86 +323,147 @@
       <label for="name">Full name</label>
       <input id="name" type="text" placeholder="Your name" required>
       <label for="teach">I can teach</label>
-      <input id="teach" type="text" placeholder="e.g. AutoCAD, Canva, French" required>
+      <input id="teach" type="text" placeholder="e.g. Photoshop, Accounting" required>
       <label for="learn">I want to learn</label>
-      <input id="learn" type="text" placeholder="e.g. Presentation skills" required>
-      <button class="btn-primary" style="margin-top:.7rem;" onclick="addEntry()">Submit</button>
-      <small id="status" style="display:none; color:green; margin-top:.4rem;">Added to Skill Board ✅</small>
-      <small>Note: This is the prototype version for LAU students.</small>
+      <input id="learn" type="text" placeholder="e.g. SPSS, Public speaking" required>
+      <button class="btn-primary" style="margin-top:.6rem;" onclick="addEntry()">Submit</button>
+      <small id="status" style="display:none;color:green;">Added to Skill Board ✅</small>
     </div>
   </section>
 
-  <!-- WHY -->
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 class="section-title">About the project</h2>
+    <p class="section-sub">
+      This prototype was developed by LAU students (MGT401) to demonstrate how peer learning can support SDG 4, 8, and 10.
+      The platform connects students who can <strong>teach</strong> with students who want to <strong>learn</strong>.
+    </p>
+  </section>
+
+  <!-- HOW -->
   <section id="how">
-    <h2 class="section-title">Why Skill Swap?</h2>
-    <p class="section-sub">We turn student knowledge into a community resource.</p>
+    <h2 class="section-title">How Skill Swap works</h2>
+    <p class="section-sub">Three simple steps to start learning and teaching.</p>
     <div class="why-grid">
       <div class="why-card">
-        <div class="why-icon">1</div>
-        <h3>Free learning</h3>
-        <p>No money, no subscriptions — just time credits.</p>
+        <h3>1. Sign up</h3>
+        <p>Tell us what you can teach and what you want to learn.</p>
       </div>
       <div class="why-card">
-        <div class="why-icon">2</div>
-        <h3>Peer-to-peer</h3>
-        <p>Learn from someone who already took the course or knows the tool.</p>
+        <h3>2. Get matched</h3>
+        <p>We pair you with someone who needs your skill.</p>
       </div>
       <div class="why-card">
-        <div class="why-icon">3</div>
-        <h3>LAU-focused</h3>
-        <p>Built for your campus, with your courses and skills in mind.</p>
+        <h3>3. Swap & earn</h3>
+        <p>Teach for 1 hour → earn 1 hour to spend on another skill.</p>
       </div>
     </div>
   </section>
 
   <!-- SKILL BOARD -->
   <section id="board">
-    <h2 class="section-title">Live Skill Board (Demo)</h2>
-    <p class="section-sub">Submissions from this page will appear here instantly.</p>
-    <div class="skill-board" id="skillBoard">
-      <div class="skill-board-head">
-        <span>Latest student offers</span>
-        <span class="tag">Prototype</span>
+    <h2 class="section-title">Live Skill Board (demo)</h2>
+    <p class="section-sub">Submissions on this page will appear here. You can also search by skill.</p>
+    <div class="board-wrap">
+      <div class="board-header">
+        <span>Latest entries</span>
+        <input type="text" id="search" class="board-search" placeholder="Search skill..." oninput="filterBoard()">
       </div>
-      <!-- sample -->
-      <div class="skill-row">
-        <div><strong>Can teach:</strong> AutoCAD basics</div>
-        <div><strong>Wants:</strong> Presentation design</div>
-        <div><span class="tag">Sample</span></div>
-      </div>
-      <div class="skill-row">
-        <div><strong>Can teach:</strong> French B1</div>
-        <div><strong>Wants:</strong> SPSS for psychology</div>
-        <div><span class="tag">Sample</span></div>
+      <div id="boardRows">
+        <div class="board-row">
+          <div><strong>Can teach:</strong> AutoCAD basics</div>
+          <div><strong>Wants:</strong> Presentation design</div>
+          <div><span class="tag">Sample</span></div>
+        </div>
+        <div class="board-row">
+          <div><strong>Can teach:</strong> French B1</div>
+          <div><strong>Wants:</strong> SPSS</div>
+          <div><span class="tag">Sample</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SDGs -->
-  <section id="sdg" style="margin-top:2.5rem;">
-    <h2 class="section-title">Aligned with SDGs</h2>
-    <p class="section-sub">This project supports SDG 4 (Quality Education), SDG 10 (Reduced Inequalities), and SDG 8 (Decent Work).</p>
+  <!-- TEAM -->
+  <section id="team">
+    <h2 class="section-title">Project Team</h2>
+    <p class="section-sub">Built by LAU students.</p>
+    <div class="team-grid">
+      <div class="team-card">
+        <h3>Yara Arakji</h3>
+        <p>Project coordination, concept & report.</p>
+      </div>
+      <div class="team-card">
+        <h3>Nour Issa</h3>
+        <p>UI content, SDG alignment, stakeholder mapping.</p>
+      </div>
+      <div class="team-card">
+        <h3>Omar Rifaii</h3>
+        <p>Website structure & project planning.</p>
+      </div>
+      <div class="team-card">
+        <h3>Samir Aridi</h3>
+        <p>Prototype testing & presentation prep.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testi">
+    <h2 class="section-title">Students said...</h2>
+    <p class="section-sub">You can change these later with real feedback.</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        “I swapped Canva for SPSS help — it saved me from paying a tutor.”
+        <br><strong>– Business student</strong>
+      </div>
+      <div class="testi-card">
+        “It’s simple. You teach for an hour, you get an hour. Fair.”
+        <br><strong>– Engineering student</strong>
+      </div>
+      <div class="testi-card">
+        “Good idea for clubs and peer learning inside LAU.”
+        <br><strong>– LAU club officer</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">Contact / Feedback</h2>
+    <p class="section-sub">This is a prototype. Tell us what to improve.</p>
+    <div class="contact-box">
+      <label>Your name</label>
+      <input type="text" placeholder="Your name">
+      <label>Your message</label>
+      <textarea rows="3" placeholder="I suggest..."></textarea>
+      <button class="btn-primary" style="margin-top:.6rem;" onclick="alert('Thanks for your feedback!')">Send</button>
+    </div>
   </section>
 
   <footer>
-    Skill Swap · Built by LAU students for academic purposes. <br>
-    Prototype v1.0
+    Skill Swap – LAU MGT401 Prototype · Yara Arakji · Nour Issa · Omar Rifaii · Samir Aridi · 2025
   </footer>
+
+  <!-- FLOATING BUTTON -->
+  <button class="float-btn" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">
+    Join now
+  </button>
 
   <script>
     function addEntry() {
       const name = document.getElementById("name").value.trim();
       const teach = document.getElementById("teach").value.trim();
       const learn = document.getElementById("learn").value.trim();
-      const board = document.getElementById("skillBoard");
+      const board = document.getElementById("boardRows");
       const status = document.getElementById("status");
 
-      if (!name || !teach || !learn) return;
+      if (!teach || !learn) return;
 
       const row = document.createElement("div");
-      row.className = "skill-row";
+      row.className = "board-row";
       row.innerHTML = `
-        <div><strong>${name}</strong> can teach: ${teach}</div>
+        <div><strong>${name ? name : "Anonymous"}</strong> can teach: ${teach}</div>
         <div><strong>Wants:</strong> ${learn}</div>
         <div><span class="tag">New</span></div>
       `;
@@ -399,7 +475,22 @@
       status.style.display = "block";
       setTimeout(() => status.style.display = "none", 3000);
     }
-  </script>
 
+    function filterBoard() {
+      const term = document.getElementById("search").value.toLowerCase();
+      const rows = document.querySelectorAll("#boardRows .board-row");
+      rows.forEach(r => {
+        if (r.textContent.toLowerCase().includes(term)) {
+          r.style.display = "grid";
+        } else {
+          r.style.display = "none";
+        }
+      });
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
 </body>
 </html>
