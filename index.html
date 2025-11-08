@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skill Swap – Trade What You Know</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background-color: #f7f9fb;
+      color: #222;
+    }
+    header {
+      background: linear-gradient(135deg, #5b3ee4, #836fff);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #5b3ee4;
+    }
+    .how-it-works {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 280px;
+      text-align: center;
+    }
+    .card h3 {
+      color: #5b3ee4;
+    }
+    .sdg {
+      background: #eee;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: 40px;
+    }
+    input, select, textarea, button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    button {
+      background: #5b3ee4;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #3d29b6;
+    }
+    footer {
+      text-align: center;
+      background: #5b3ee4;
+      color: white;
+      padding: 15px;
+      margin-top: 50px;
+    }
+    @media (max-width: 768px) {
+      .how-it-works {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Skill Swap</h1>
+    <p>Trade What You Know — Learn What You Don’t</p>
+    <p>“You give one hour of your time, you earn one hour from someone else.”</p>
+  </header>
+
+  <section>
+    <h2>💡 The Concept</h2>
+    <p>Skill Swap is a free platform for LAU students to exchange skills instead of money. 
+    Whether you can teach Photoshop, Italian, or Excel — or want to learn them — this is your place to connect.</p>
+  </section>
+
+  <section>
+    <h2>⚙️ How It Works</h2>
+    <div class="how-it-works">
+      <div class="card">
+        <h3>1. Join</h3>
+        <p>Sign up by listing the skills you can teach and what you want to learn.</p>
+      </div>
+      <div class="card">
+        <h3>2. Match</h3>
+        <p>Get matched with students who complement your skills and interests.</p>
+      </div>
+      <div class="card">
+        <h3>3. Swap</h3>
+        <p>Meet online or on campus to exchange knowledge — no money involved.</p>
+      </div>
+      <div class="card">
+        <h3>4. Earn Credits</h3>
+        <p>Each hour you teach earns one credit to spend on learning from someone else.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🌍 SDG Alignment</h2>
+    <div class="sdg">
+      <p><strong>SDG 4:</strong> Quality Education – promoting peer-to-peer learning.</p>
+      <p><strong>SDG 10:</strong> Reduced Inequalities – equal learning opportunities for everyone.</p>
+      <p><strong>SDG 8:</strong> Decent Work & Economic Growth – developing real-world skills for employability.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>📝 Join the Platform</h2>
+    <form name="skillSwapForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
+      <label for="email">University Email:</label>
+      <input type="email" id="email" name="email" placeholder="example@lau.edu.lb" required>
+      <label for="canTeach">I Can Teach:</label>
+      <input type="text" id="canTeach" name="canTeach" placeholder="e.g. Photoshop, French, Excel" required>
+      <label for="wantLearn">I Want to Learn:</label>
+      <input type="text" id="wantLearn" name="wantLearn" placeholder="e.g. AutoCAD, Public Speaking" required>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Skill Swap | Created by LAU Students</p>
+  </footer>
+</body>
+</html>
