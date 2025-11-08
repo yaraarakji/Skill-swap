@@ -3,163 +3,403 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skill Swap – Trade What You Know</title>
+  <title>Skill Swap – LAU Students</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #f5f6fb;
+      --card: #ffffff;
+      --primary: #5b3ee4;
+      --primary-soft: rgba(91, 62, 228, .08);
+      --text: #1f2937;
+      --muted: #6b7280;
+      --radius: 1.2rem;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: "Poppins", sans-serif;
       margin: 0;
-      background-color: #f7f9fb;
-      color: #222;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
-    header {
-      background: linear-gradient(135deg, #5b3ee4, #836fff);
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
+
+    /* NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(245, 246, 251, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,.03);
     }
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.2em;
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: .6rem 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
     }
-    header p {
-      font-size: 1.2em;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-weight: 700;
     }
-    section {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 0 20px;
+    .brand-badge {
+      width: 30px;
+      height: 30px;
+      border-radius: .9rem;
+      background: var(--primary);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: .7rem;
     }
-    h2 {
-      text-align: center;
-      color: #5b3ee4;
+    .nav-links {
+      display: flex;
+      gap: 1rem;
     }
-    .how-it-works {
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: .85rem;
+      font-weight: 500;
+    }
+    .nav-btn {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: .4rem .9rem;
+      border-radius: .7rem;
+      font-weight: 600;
+      font-size: .75rem;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      max-width: 1100px;
+      margin: 2rem auto 2.5rem;
+      padding: 0 1.2rem;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 1.8rem;
+      align-items: center;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      background: var(--primary-soft);
+      color: var(--primary);
+      padding: .35rem .75rem;
+      border-radius: 999px;
+      font-size: .7rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(2.1rem, 3vw, 2.7rem);
+      line-height: 1.1;
+      margin-bottom: .9rem;
+    }
+    .hero p {
+      color: var(--muted);
+      margin-bottom: 1.4rem;
+      max-width: 32rem;
+    }
+    .actions {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 30px;
+      gap: .7rem;
     }
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 20px;
-      width: 280px;
-      text-align: center;
-    }
-    .card h3 {
-      color: #5b3ee4;
-    }
-    .sdg {
-      background: #eee;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      margin-top: 40px;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      background: white;
-      border-radius: 10px;
-      padding: 25px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-top: 40px;
-    }
-    input, select, textarea, button {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1em;
-    }
-    button {
-      background: #5b3ee4;
-      color: white;
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: .8rem;
+      padding: .6rem 1.1rem;
+      font-weight: 600;
       cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
     }
-    button:hover {
-      background: #3d29b6;
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid rgba(91,62,228,.3);
+      color: var(--primary);
+      border-radius: .8rem;
+      padding: .55rem 1rem;
+      font-weight: 600;
+      text-decoration: none;
     }
+    .hero-card {
+      background: var(--card);
+      border-radius: 1.3rem;
+      padding: 1.1rem 1.1rem 1.3rem;
+      box-shadow: 0 24px 60px rgba(0,0,0,.04);
+      border: 1px solid rgba(91,62,228,.05);
+    }
+    .hero-card h2 {
+      font-size: 1rem;
+      margin-top: 0;
+    }
+    .hero-card label {
+      display: block;
+      font-size: .75rem;
+      font-weight: 500;
+      margin-top: .6rem;
+    }
+    .hero-card input {
+      width: 100%;
+      background: #f3f4f6;
+      border: 1px solid rgba(0,0,0,.03);
+      border-radius: .6rem;
+      padding: .5rem .55rem;
+      margin-top: .25rem;
+      font-family: inherit;
+    }
+    .hero-card small {
+      font-size: .65rem;
+      color: var(--muted);
+      display: block;
+      margin-top: .4rem;
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+    }
+    .section-title {
+      font-size: 1.4rem;
+      margin-bottom: .4rem;
+    }
+    .section-sub {
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.2rem;
+    }
+    .why-card {
+      background: var(--card);
+      border-radius: 1rem;
+      padding: 1rem;
+      border: 1px solid rgba(0,0,0,.02);
+    }
+    .why-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: .7rem;
+      background: var(--primary-soft);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      margin-bottom: .5rem;
+    }
+
+    /* SKILL BOARD */
+    .skill-board {
+      background: var(--card);
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,.02);
+      margin-bottom: 2.5rem;
+    }
+    .skill-board-head {
+      background: #f0ecff;
+      padding: .9rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: .8rem;
+    }
+    .skill-row {
+      display: grid;
+      grid-template-columns: 1.2fr 1.2fr .6fr;
+      gap: .6rem;
+      padding: .6rem 1rem;
+      border-bottom: 1px solid rgba(0,0,0,.02);
+      font-size: .8rem;
+      align-items: center;
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(91,62,228,.1);
+      color: var(--primary);
+      padding: .2rem .6rem;
+      border-radius: 999px;
+      font-size: .67rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
-      background: #5b3ee4;
-      color: white;
-      padding: 15px;
-      margin-top: 50px;
+      padding: 2.5rem 1.2rem 3rem;
+      color: var(--muted);
+      font-size: .75rem;
     }
-    @media (max-width: 768px) {
-      .how-it-works {
-        flex-direction: column;
-        align-items: center;
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+      .skill-row {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Skill Swap</h1>
-    <p>Trade What You Know — Learn What You Don’t</p>
-    <p>“You give one hour of your time, you earn one hour from someone else.”</p>
-  </header>
 
-  <section>
-    <h2>💡 The Concept</h2>
-    <p>Skill Swap is a free platform for LAU students to exchange skills instead of money. 
-    Whether you can teach Photoshop, Italian, or Excel — or want to learn them — this is your place to connect.</p>
+  <!-- NAV -->
+  <div class="navbar">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-badge">SS</div>
+        Skill Swap
+      </div>
+      <div class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#board">Skill Board</a>
+        <a href="#sdg">SDGs</a>
+      </div>
+      <button class="nav-btn" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">Join</button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <div class="badge">LAU Project · Fall 2025</div>
+      <h1>Trade time, build skills, grow together.</h1>
+      <p>A campus-first platform where LAU students exchange skills instead of paying money. You teach for 1 hour → you earn 1 hour to learn from someone else.</p>
+      <div class="actions">
+        <a href="#join" class="btn-primary">Join the pilot →</a>
+        <a href="#board" class="btn-secondary">View Skill Board</a>
+      </div>
+    </div>
+    <div class="hero-card" id="join">
+      <h2>Join Skill Swap</h2>
+      <label for="name">Full name</label>
+      <input id="name" type="text" placeholder="Your name" required>
+      <label for="teach">I can teach</label>
+      <input id="teach" type="text" placeholder="e.g. AutoCAD, Canva, French" required>
+      <label for="learn">I want to learn</label>
+      <input id="learn" type="text" placeholder="e.g. Presentation skills" required>
+      <button class="btn-primary" style="margin-top:.7rem;" onclick="addEntry()">Submit</button>
+      <small id="status" style="display:none; color:green; margin-top:.4rem;">Added to Skill Board ✅</small>
+      <small>Note: This is the prototype version for LAU students.</small>
+    </div>
   </section>
 
-  <section>
-    <h2>⚙️ How It Works</h2>
-    <div class="how-it-works">
-      <div class="card">
-        <h3>1. Join</h3>
-        <p>Sign up by listing the skills you can teach and what you want to learn.</p>
+  <!-- WHY -->
+  <section id="how">
+    <h2 class="section-title">Why Skill Swap?</h2>
+    <p class="section-sub">We turn student knowledge into a community resource.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">1</div>
+        <h3>Free learning</h3>
+        <p>No money, no subscriptions — just time credits.</p>
       </div>
-      <div class="card">
-        <h3>2. Match</h3>
-        <p>Get matched with students who complement your skills and interests.</p>
+      <div class="why-card">
+        <div class="why-icon">2</div>
+        <h3>Peer-to-peer</h3>
+        <p>Learn from someone who already took the course or knows the tool.</p>
       </div>
-      <div class="card">
-        <h3>3. Swap</h3>
-        <p>Meet online or on campus to exchange knowledge — no money involved.</p>
-      </div>
-      <div class="card">
-        <h3>4. Earn Credits</h3>
-        <p>Each hour you teach earns one credit to spend on learning from someone else.</p>
+      <div class="why-card">
+        <div class="why-icon">3</div>
+        <h3>LAU-focused</h3>
+        <p>Built for your campus, with your courses and skills in mind.</p>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>🌍 SDG Alignment</h2>
-    <div class="sdg">
-      <p><strong>SDG 4:</strong> Quality Education – promoting peer-to-peer learning.</p>
-      <p><strong>SDG 10:</strong> Reduced Inequalities – equal learning opportunities for everyone.</p>
-      <p><strong>SDG 8:</strong> Decent Work & Economic Growth – developing real-world skills for employability.</p>
+  <!-- SKILL BOARD -->
+  <section id="board">
+    <h2 class="section-title">Live Skill Board (Demo)</h2>
+    <p class="section-sub">Submissions from this page will appear here instantly.</p>
+    <div class="skill-board" id="skillBoard">
+      <div class="skill-board-head">
+        <span>Latest student offers</span>
+        <span class="tag">Prototype</span>
+      </div>
+      <!-- sample -->
+      <div class="skill-row">
+        <div><strong>Can teach:</strong> AutoCAD basics</div>
+        <div><strong>Wants:</strong> Presentation design</div>
+        <div><span class="tag">Sample</span></div>
+      </div>
+      <div class="skill-row">
+        <div><strong>Can teach:</strong> French B1</div>
+        <div><strong>Wants:</strong> SPSS for psychology</div>
+        <div><span class="tag">Sample</span></div>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h2>📝 Join the Platform</h2>
-    <form name="skillSwapForm">
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" placeholder="Your full name" required>
-      <label for="email">University Email:</label>
-      <input type="email" id="email" name="email" placeholder="example@lau.edu.lb" required>
-      <label for="canTeach">I Can Teach:</label>
-      <input type="text" id="canTeach" name="canTeach" placeholder="e.g. Photoshop, French, Excel" required>
-      <label for="wantLearn">I Want to Learn:</label>
-      <input type="text" id="wantLearn" name="wantLearn" placeholder="e.g. AutoCAD, Public Speaking" required>
-      <button type="submit">Submit</button>
-    </form>
+  <!-- SDGs -->
+  <section id="sdg" style="margin-top:2.5rem;">
+    <h2 class="section-title">Aligned with SDGs</h2>
+    <p class="section-sub">This project supports SDG 4 (Quality Education), SDG 10 (Reduced Inequalities), and SDG 8 (Decent Work).</p>
   </section>
 
   <footer>
-    <p>© 2025 Skill Swap | Created by LAU Students</p>
+    Skill Swap · Built by LAU students for academic purposes. <br>
+    Prototype v1.0
   </footer>
+
+  <script>
+    function addEntry() {
+      const name = document.getElementById("name").value.trim();
+      const teach = document.getElementById("teach").value.trim();
+      const learn = document.getElementById("learn").value.trim();
+      const board = document.getElementById("skillBoard");
+      const status = document.getElementById("status");
+
+      if (!name || !teach || !learn) return;
+
+      const row = document.createElement("div");
+      row.className = "skill-row";
+      row.innerHTML = `
+        <div><strong>${name}</strong> can teach: ${teach}</div>
+        <div><strong>Wants:</strong> ${learn}</div>
+        <div><span class="tag">New</span></div>
+      `;
+      board.appendChild(row);
+
+      document.getElementById("name").value = "";
+      document.getElementById("teach").value = "";
+      document.getElementById("learn").value = "";
+      status.style.display = "block";
+      setTimeout(() => status.style.display = "none", 3000);
+    }
+  </script>
+
 </body>
 </html>
