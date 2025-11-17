@@ -6,12 +6,14 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+  <!-- NAVBAR -->
   <div class="navbar">
     <div class="nav-inner">
       <div class="logo-wrap">
         <a href="index.html">
-          <!-- logo -->
           <svg width="120" height="38" viewBox="0 0 220 60">
             <circle cx="30" cy="30" r="26" fill="#5B3EE4" />
             <path d="M22 23C23.8 18.5 29 16.5 33.5 18.3C36 19.3 37.9 21.5 38.6 23.9L41.5 22.2C41.9 22 42.3 22.3 42.2 22.7L40.8 28.3C40.7 28.7 40.3 28.9 39.9 28.8L34.3 27.4C33.9 27.3 33.9 26.7 34.3 26.5L37.1 25C36.5 23.5 35.4 22.1 33.8 21.5C31.1 20.4 28 21.6 26.8 24.3C26.6 24.7 26 24.8 25.5 24.6L23 23.5C22.5 23.3 21.8 23.2 22 23Z" fill="white"/>
@@ -33,54 +35,101 @@
       </div>
 
       <div class="team-names">
-        Yara Arakji · Nour Issa<br>Omar Rifaii · Samir Aridi
+        Yara Arakji · Nour Issa<br>
+        Omar Rifaii · Samir Aridi
       </div>
 
       <button class="theme-btn" onclick="toggleTheme()">Theme</button>
     </div>
   </div>
 
+  <!-- FAQ CONTENT -->
   <div class="container">
     <section class="section">
       <h1 class="section-title">Frequently Asked Questions</h1>
-      <p class="section-sub">Quick answers to everything you need to know about Skill Swap.</p>
+      <p class="section-sub">
+        Quick answers for students, instructors, and judges who want to understand how Skill Swap works.
+      </p>
 
       <div class="faq-item">
-        <h3>What is Skill Swap?</h3>
-        <p>It’s a student-to-student platform where you exchange skills instead of paying money.</p>
+        <h3>What is Skill Swap in one sentence?</h3>
+        <p>
+          Skill Swap is a student-to-student platform where you exchange skills and time instead of paying money.
+        </p>
       </div>
 
       <div class="faq-item">
         <h3>Who can join?</h3>
-        <p>Any LAU student from any major can participate.</p>
+        <p>
+          Any LAU student from any major can participate as long as they are willing to both offer and receive help.
+        </p>
       </div>
 
       <div class="faq-item">
-        <h3>Is it free?</h3>
-        <p>Yes! Skill Swap is completely free. You exchange time, not money.</p>
+        <h3>Do I have to be an “expert” to offer a skill?</h3>
+        <p>
+          No. You just need to be comfortable enough with a topic to help someone who knows less than you
+          (for example, if you already passed a course or use a tool regularly).
+        </p>
       </div>
 
       <div class="faq-item">
-        <h3>Do I need to be an expert to teach?</h3>
-        <p>No. You just need to know something better than someone else — even basics help.</p>
+        <h3>How do I actually contact other students?</h3>
+        <p>
+          When students fill the Join form, they share an Instagram handle or email. On the Skill Board, they can be
+          contacted directly using that information to agree on a time and place.
+        </p>
       </div>
 
       <div class="faq-item">
-        <h3>How do I contact another student?</h3>
-        <p>Use the Instagram or email they include when submitting their skill.</p>
+        <h3>Is this a real platform or just a prototype?</h3>
+        <p>
+          The version you see now is a <strong>front-end prototype</strong> created for the MGT401 Project
+          Management course. It shows the user journey and interface. A back-end (database, Google Sheets, etc.)
+          can be added in the next phase.
+        </p>
       </div>
 
       <div class="faq-item">
-        <h3>Can I offer or learn more than one skill?</h3>
-        <p>Yes! You can offer multiple skills and use your time credits to learn different ones.</p>
+        <h3>Does Skill Swap replace formal tutoring services?</h3>
+        <p>
+          No. It complements them by focusing on peer-to-peer support, practical tips, and course-specific
+          experience from fellow students.
+        </p>
       </div>
+
+      <div class="faq-item">
+        <h3>How is “fairness” maintained?</h3>
+        <p>
+          The concept is based on time credits: one hour of helping equals one learning hour you can use later.
+          In a future version, a simple tracking system can monitor this.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can this work at other universities?</h3>
+        <p>
+          Yes. The model is designed to be scalable. Only the branding and connection to student emails or IDs
+          would need to be adjusted.
+        </p>
+      </div>
+
+      <p style="margin-top:1.2rem; font-size:.8rem; color:var(--muted);">
+        For the purposes of the MGT401 project, this FAQ demonstrates how we anticipate student questions and how
+        the platform could be communicated if launched officially.
+      </p>
     </section>
   </div>
 
-  <footer>Skill Swap – LAU MGT401 Project · 2025</footer>
+  <footer>
+    Skill Swap – LAU MGT401 Project · 2025
+  </footer>
 
   <script>
-    function toggleTheme(){ document.body.classList.toggle('dark'); }
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
   </script>
+
 </body>
 </html>
