@@ -6,12 +6,13 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <!-- NAVBAR -->
   <div class="navbar">
     <div class="nav-inner">
       <div class="logo-wrap">
         <a href="index.html">
-          <!-- same logo -->
           <svg width="120" height="38" viewBox="0 0 220 60">
             <circle cx="30" cy="30" r="26" fill="#5B3EE4" />
             <path d="M22 23C23.8 18.5 29 16.5 33.5 18.3C36 19.3 37.9 21.5 38.6 23.9L41.5 22.2C41.9 22 42.3 22.3 42.2 22.7L40.8 28.3C40.7 28.7 40.3 28.9 39.9 28.8L34.3 27.4C33.9 27.3 33.9 26.7 34.3 26.5L37.1 25C36.5 23.5 35.4 22.1 33.8 21.5C31.1 20.4 28 21.6 26.8 24.3C26.6 24.7 26 24.8 25.5 24.6L23 23.5C22.5 23.3 21.8 23.2 22 23Z" fill="white"/>
@@ -33,62 +34,144 @@
       </div>
 
       <div class="team-names">
-        Yara Arakji · Nour Issa<br>Omar Rifaii · Samir Aridi
+        Yara Arakji · Nour Issa<br>
+        Omar Rifaii · Samir Aridi
       </div>
 
       <button class="theme-btn" onclick="toggleTheme()">Theme</button>
     </div>
   </div>
 
+  <!-- ABOUT CONTENT -->
   <div class="container">
     <section class="section">
       <h1 class="section-title">About Skill Swap</h1>
       <p class="section-sub">
-        Skill Swap is a peer-to-peer skill exchange platform built specifically for LAU students.
+        Skill Swap is a student-built platform that helps LAU students exchange skills, time,
+        and support without using money.
       </p>
 
-      <div class="card">
-        <h2>Why We Created It</h2>
-        <p>
-          We noticed that students constantly need help in different areas — presentations, writing,
-          languages, software, exam preparation — while other students already master these skills.
-          However, there is no single platform that connects them.
-        </p>
-        <p>
-          Skill Swap fills this gap. Students can offer any skill they already have and receive help in
-          something they want to learn — all without spending money.
-        </p>
+      <!-- Problem & Idea -->
+      <div class="grid-2">
+        <div class="card">
+          <h2>The problem we saw on campus</h2>
+          <p>
+            Many students struggle with assignments, presentations, and software, while other
+            students already have those skills. However, there is no central place that connects
+            them in a structured and fair way.
+          </p>
+          <p>
+            As a result, potential is wasted: students either pay for private tutoring, give up,
+            or never discover that someone just one building away could have helped them.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>Our solution</h2>
+          <p>
+            Skill Swap turns skills into a shared resource. Students offer what they know,
+            and receive what they need in return. Time is the currency: one hour of helping
+            someone earns one hour of learning from someone else.
+          </p>
+          <p>
+            The platform is designed to be simple, free, and campus-focused – tailored to LAU’s
+            reality and course load.
+          </p>
+        </div>
       </div>
 
-      <br>
+      <!-- Mission & Vision -->
+      <section class="section">
+        <div class="grid-2">
+          <div class="card">
+            <h2>Our mission</h2>
+            <p>
+              To build a culture of collaboration on campus where students feel comfortable asking
+              for help and proud to share their skills.
+            </p>
+            <ul style="font-size:.85rem; color:var(--muted); line-height:1.8;">
+              <li>Make learning support more accessible.</li>
+              <li>Encourage peer-to-peer teaching.</li>
+              <li>Highlight the value of student skills.</li>
+            </ul>
+          </div>
 
-      <div class="card">
-        <h2>Our Mission</h2>
-        <p>
-          To build a culture of collaboration on campus where knowledge flows freely, students support each
-          other, and learning becomes accessible for everyone.
+          <div class="card">
+            <h2>Our vision</h2>
+            <p>
+              In the short term, Skill Swap aims to become LAU’s go-to platform for academic
+              and practical support between students.
+            </p>
+            <p>
+              In the long term, the model can scale to other universities in Lebanon, forming
+              a wider network of student-led knowledge exchange.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team section -->
+      <section class="section">
+        <h2 class="section-title">The team behind Skill Swap</h2>
+        <p class="section-sub">
+          Developed as part of the MGT401 Project Management course at the Lebanese American University.
         </p>
-      </div>
 
-      <br>
+        <div class="grid-4">
+          <div class="card">
+            <h3 style="margin-bottom:.2rem;">Yara Arakji</h3>
+            <p style="font-size:.8rem; color:var(--muted); margin-top:0;">
+              Project Manager & Concept Lead
+            </p>
+            <p style="font-size:.8rem;">
+              Coordinates the overall project, vision, and presentation for Project Sharks.
+            </p>
+          </div>
 
-      <div class="card">
-        <h2>Our Team</h2>
-        <p>This prototype is developed as part of the MGT401 course at the Lebanese American University.</p>
-        <ul style="line-height:1.8;">
-          <li><strong>Yara Arakji</strong> – Project Manager</li>
-          <li><strong>Nour Issa</strong> – Content & Design Lead</li>
-          <li><strong>Omar Rifaii</strong> – Technical Liaison</li>
-          <li><strong>Samir Aridi</strong> – Outreach & Marketing Lead</li>
-        </ul>
-      </div>
+          <div class="card">
+            <h3 style="margin-bottom:.2rem;">Nour Issa</h3>
+            <p style="font-size:.8rem; color:var(--muted); margin-top:0;">
+              Content & User Experience
+            </p>
+            <p style="font-size:.8rem;">
+              Designs the user journey, page content, and communication tone of the platform.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 style="margin-bottom:.2rem;">Omar Rifaii</h3>
+            <p style="font-size:.8rem; color:var(--muted); margin-top:0;">
+              Technical & Data Coordination
+            </p>
+            <p style="font-size:.8rem;">
+              Supports the structure of the website and explores future integration with tools
+              like Google Sheets.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 style="margin-bottom:.2rem;">Samir Aridi</h3>
+            <p style="font-size:.8rem; color:var(--muted); margin-top:0;">
+              Branding & Outreach
+            </p>
+            <p style="font-size:.8rem;">
+              Focuses on logo, visuals, and how to introduce Skill Swap to students on campus.
+            </p>
+          </div>
+        </div>
+      </section>
+
     </section>
   </div>
 
-  <footer>Skill Swap – LAU MGT401 Project · 2025</footer>
+  <footer>
+    Skill Swap – LAU MGT401 Project · 2025
+  </footer>
 
   <script>
-    function toggleTheme(){ document.body.classList.toggle('dark'); }
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
   </script>
 </body>
 </html>
