@@ -35,4 +35,75 @@
       </div>
 
       <div class="team-names">
-        Yara Arakji · Nour
+        Yara Arakji · Nour Issa<br>
+        Omar Rifaii · Samir Aridi
+      </div>
+
+      <button class="theme-btn" onclick="toggleTheme()">Theme</button>
+    </div>
+  </div>
+
+  <!-- CONTACT CONTENT -->
+  <div class="container">
+    <section class="section">
+      <h1 class="section-title">Contact & Feedback</h1>
+      <p class="section-sub">
+        Do you have a suggestion, question, or idea for improving Skill Swap?  
+        Send us a message below.
+      </p>
+
+      <div class="card" style="max-width:520px;">
+        <form id="contactForm">
+          <label>Your Name</label>
+          <input type="text" id="cname" placeholder="Enter your name">
+
+          <br><br>
+
+          <label>Your Email</label>
+          <input type="email" id="cemail" placeholder="example@lau.edu.lb">
+
+          <br><br>
+
+          <label>Your Message</label>
+          <textarea id="cmsg" rows="4" placeholder="Write your feedback here..."></textarea>
+
+          <br><br>
+
+          <button type="button" class="btn-primary" onclick="sendContact()">Send</button>
+        </form>
+
+        <p id="contactStatus" style="margin-top:1rem; font-weight:600; color:var(--primary);"></p>
+      </div>
+
+      <br>
+
+      <div class="card">
+        <h2>Project Context</h2>
+        <p>
+          Skill Swap is currently a prototype developed for the MGT401 course at the
+          Lebanese American University. In a future version, this page could be
+          connected to an official LAU email or ticketing system.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    Skill Swap – LAU MGT401 Project · 2025
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+
+    // Prototype only – just shows confirmation
+    function sendContact() {
+      document.getElementById("contactStatus").innerHTML =
+        "Thank you for your message! In this prototype, your feedback is not stored yet.";
+      document.getElementById("contactForm").reset();
+    }
+  </script>
+
+</body>
+</html>
