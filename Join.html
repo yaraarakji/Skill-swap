@@ -59,4 +59,44 @@
           <br><br>
 
           <label>Skill you can offer</label>
-          <input type="text" id="offer" placeholder="Example: French, Excel
+          <input type="text" id="offer" placeholder="Example: French, Excel, AutoCAD..." required>
+
+          <br><br>
+
+          <label>Skill you want to learn</label>
+          <input type="text" id="learn" placeholder="Example: SPSS, Writing, Photoshop...">
+
+          <br><br>
+
+          <label>Instagram / Email</label>
+          <input type="text" id="contact" placeholder="How can students reach you?" required>
+
+          <br><br>
+
+          <button class="btn-primary" type="button" onclick="submitForm()">Submit</button>
+        </form>
+
+        <p id="responseMsg" style="color:var(--primary); font-weight:600; margin-top:1rem;"></p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    Skill Swap – LAU MGT401 Project · 2025
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+
+    // TEMPORARY PROTOTYPE — only shows success message
+    function submitForm() {
+      document.getElementById("responseMsg").innerHTML =
+        "Thank you! Your request has been submitted (prototype mode).";
+      document.getElementById("joinForm").reset();
+    }
+  </script>
+
+</body>
+</html>
