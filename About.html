@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About – Skill Swap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="nav-inner">
+      <div class="logo-wrap">
+        <a href="index.html">
+          <svg width="120" height="38" viewBox="0 0 220 60">
+            <circle cx="30" cy="30" r="26" fill="#5B3EE4" />
+            <path d="M22 23C23.8 18.5 29 16.5 33.5 18.3C36 19.3 37.9 21.5 38.6 23.9L41.5 22.2C41.9 22 42.3 22.3 42.2 22.7L40.8 28.3C40.7 28.7 40.3 28.9 39.9 28.8L34.3 27.4C33.9 27.3 33.9 26.7 34.3 26.5L37.1 25C36.5 23.5 35.4 22.1 33.8 21.5C31.1 20.4 28 21.6 26.8 24.3C26.6 24.7 26 24.8 25.5 24.6L23 23.5C22.5 23.3 21.8 23.2 22 23Z" fill="white"/>
+            <path d="M38 36.7C36.2 41.2 31 43.2 26.5 41.4C24 40.4 22.1 38.2 21.4 35.8L18.5 37.5C18.1 37.7 17.7 37.4 17.8 37L19.2 31.4C19.3 31 19.7 30.8 20.1 30.9L25.7 32.3C26.1 32.4 26.1 33 25.7 33.2L22.9 34.7C23.5 36.2 24.6 37.6 26.2 38.2C28.9 39.3 32 38.1 33.2 35.4C33.4 35 34 34.9 34.5 35.1L37 36.2C37.5 36.4 38.2 36.5 38 36.7Z" fill="#C7F2CB"/>
+            <text x="65" y="25" fill="#1F2937" font-size="14" font-weight="700">Skill Swap</text>
+          </svg>
+        </a>
+      </div>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="how-it-works.html">How it Works</a>
+        <a href="skillboard.html">Skill Board</a>
+        <a href="join.html">Join</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="team-names">
+        Yara Arakji · Nour Issa<br>
+        Omar Rifaii · Samir Aridi
+      </div>
+
+      <button class="theme-btn" onclick="toggleTheme()">Theme</button>
+    </div>
+  </div>
+
+  <!-- ABOUT CONTENT -->
+  <div class="container">
+    <section class="section">
+      <h1 class="section-title">About Skill Swap</h1>
+      <p class="section-sub">
+        Skill Swap is a peer-to-peer skill exchange platform built specifically for LAU students.
+      </p>
+
+      <div class="card">
+        <h2>Why We Created It</h2>
+        <p>
+          We noticed that LAU students constantly need help in different areas —
+          presentations, writing, languages, software, exam preparation — while
+          other students already master these skills. However, there is no single
+          platform that connects them.
+        </p>
+        <p>
+          Skill Swap was created to fill this gap. Students can offer any skill they
+          already have and receive help in something they want to learn — all without
+          spending money.
+        </p>
+      </div>
+
+      <br>
+
+      <div class="card">
+        <h2>Our Mission</h2>
+        <p>
+          To build a culture of collaboration on campus where knowledge flows freely,
+          students support each other, and learning becomes accessible for everyone.
+        </p>
+      </div>
+
+      <br>
+
+      <div class="card">
+        <h2>Our Team</h2>
+        <p>
+          Skill Swap is developed as part of the MGT401 course at the Lebanese American University.
+          The project is proudly created by:
+        </p>
+
+        <ul style="line-height:1.8;">
+          <li><strong>Yara Arakji</strong> – Project Manager</li>
+          <li><strong>Nour Issa</strong> – Content & Design Lead</li>
+          <li><strong>Omar Rifaii</strong> – Technical Liaison</li>
+          <li><strong>Samir Aridi</strong> – Outreach & Marketing Lead</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    Skill Swap – LAU MGT401 Project · 2025
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
