@@ -26,7 +26,7 @@
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="how-it-works.html">How It Works</a>
+        <a href="how-it-works.html">How it Works</a>
         <a href="skillboard.html">Skill Board</a>
         <a href="join.html">Join</a>
         <a href="testimonials.html">Testimonials</a>
@@ -48,42 +48,54 @@
     <section class="section">
       <h1 class="section-title">Contact & Feedback</h1>
       <p class="section-sub">
-        Do you have a suggestion, question, or idea for improving Skill Swap?  
-        Send us a message below.
+        This page is designed for students, instructors, or judges who want to share ideas,
+        ask questions, or give feedback about Skill Swap.
       </p>
 
-      <div class="card" style="max-width:520px;">
-        <form id="contactForm">
-          <label>Your Name</label>
-          <input type="text" id="cname" placeholder="Enter your name">
+      <div class="grid-2">
+        <!-- Contact form (prototype) -->
+        <div class="card" style="max-width:520px;">
+          <h2 style="font-size:1rem; margin-top:0;">Send us a message (prototype)</h2>
 
-          <br><br>
+          <form id="contactForm">
+            <label>Your name</label>
+            <input type="text" id="cname" placeholder="Enter your name">
 
-          <label>Your Email</label>
-          <input type="email" id="cemail" placeholder="example@lau.edu.lb">
+            <br><br>
 
-          <br><br>
+            <label>Your email</label>
+            <input type="email" id="cemail" placeholder="example@lau.edu.lb">
 
-          <label>Your Message</label>
-          <textarea id="cmsg" rows="4" placeholder="Write your feedback here..."></textarea>
+            <br><br>
 
-          <br><br>
+            <label>Your message</label>
+            <textarea id="cmsg" rows="4" placeholder="Write your feedback, question, or suggestion here..."></textarea>
 
-          <button type="button" class="btn-primary" onclick="sendContact()">Send</button>
-        </form>
+            <br><br>
 
-        <p id="contactStatus" style="margin-top:1rem; font-weight:600; color:var(--primary);"></p>
-      </div>
+            <button type="button" class="btn-primary" onclick="sendContact()">Send</button>
+          </form>
 
-      <br>
+          <p id="contactStatus" style="margin-top:1rem; font-weight:600; color:var(--primary); font-size:.85rem;"></p>
+        </div>
 
-      <div class="card">
-        <h2>Project Context</h2>
-        <p>
-          Skill Swap is currently a prototype developed for the MGT401 course at the
-          Lebanese American University. In a future version, this page could be
-          connected to an official LAU email or ticketing system.
-        </p>
+        <!-- Info for judges / future version -->
+        <div class="card">
+          <h2 style="font-size:1rem; margin-top:0;">How this page would work in a full version</h2>
+          <p style="font-size:.85rem; color:var(--muted);">
+            In this prototype, the contact form is not connected to an email server or database.
+            Instead, it demonstrates where communication would happen in a real deployment.
+          </p>
+          <ul style="font-size:.85rem; color:var(--muted); line-height:1.9;">
+            <li>Messages could be sent to a dedicated LAU email address for the project team.</li>
+            <li>Feedback from students could be stored in a simple Google Sheet for analysis.</li>
+            <li>Supervisors or faculty could receive suggestions from students about improving the platform.</li>
+          </ul>
+          <p style="font-size:.8rem; color:var(--muted); margin-top:.7rem;">
+            For MGT401, this page shows how communication would be integrated without requiring a complex
+            back-end at the prototype stage.
+          </p>
+        </div>
       </div>
     </section>
   </div>
@@ -97,10 +109,22 @@
       document.body.classList.toggle('dark');
     }
 
-    // Prototype only – just shows confirmation
+    // Prototype-only: show a confirmation instead of actually sending anything
     function sendContact() {
+      const name = document.getElementById("cname").value.trim();
+      const email = document.getElementById("cemail").value.trim();
+      const msg = document.getElementById("cmsg").value.trim();
+
+      if (!name && !email && !msg) {
+        document.getElementById("contactStatus").innerHTML =
+          "Please write at least a short message before sending.";
+        return;
+      }
+
       document.getElementById("contactStatus").innerHTML =
-        "Thank you for your message! In this prototype, your feedback is not stored yet.";
+        "Thank you for your message! In this prototype, your feedback is not stored yet – " +
+        "but this shows where the communication flow would start.";
+
       document.getElementById("contactForm").reset();
     }
   </script>
