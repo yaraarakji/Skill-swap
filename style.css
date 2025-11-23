@@ -694,18 +694,20 @@ body.dark footer {
     bottom: 16px;
   }
 }
-/* HERO LOGO — BIGGER VERSION */
+/* HERO LOGO – Full Width Big Version */
 .hero-logo {
+    grid-column: 1 / -1;
     text-align: center;
-    margin: 1.5rem 0 1.2rem 0;
+    margin: 1.5rem 0;
 }
 
 .hero-logo img {
-    width: 220px;      /* increased size */
+    width: 380px !important; /* BIG logo */
+    max-width: 90%;
     height: auto;
-    border-radius: 16px;
     object-fit: contain;
+    border-radius: 20px;
     display: block;
     margin: 0 auto;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15); /* subtle glow */
+    box-shadow: 0 0 12px rgba(0,0,0,0.12);
 }
