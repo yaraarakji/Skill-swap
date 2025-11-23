@@ -37,204 +37,220 @@
     </div>
   </div>
 
+  <!-- MAIN CONTENT -->
   <div class="container">
+
     <!-- SKILL BOARD HERO -->
     <section class="section skillboard-hero">
       <h1 class="section-title">Skill Board (Prototype)</h1>
       <p class="section-sub">
-        This page shows how Skill Swap could display skills offered by LAU students.
-        For the MGT401 project, this is a front-end prototype – in a full version it would be connected
-        to a real database or Google Sheet.
+        Browse examples of skills offered by LAU students. In the full version, this page would update
+        automatically whenever a student submits the Join form.
       </p>
 
+      <!-- SEARCH BAR -->
       <div class="search-row">
         <input
           type="text"
           class="search-input"
-          placeholder="Search skills (e.g., Excel, French, SPSS, presentations)…"
-          
-        >
+          placeholder="Search skills (e.g., Excel, French, SPSS, presentations)…">
         <span class="search-note">
-  Type to filter the sample cards below. In a full version, this would search real student skills.
+          Type to filter the sample cards. You can combine search + category filters.
         </span>
       </div>
 
+      <!-- FILTER PILLS -->
       <div class="pill-tabs">
-        <button class="pill-tab active">All</button>
-        <button class="pill-tab">Languages</button>
-        <button class="pill-tab">Software</button>
-        <button class="pill-tab">Presentations</button>
-        <button class="pill-tab">Study Support</button>
+        <button class="pill-tab active" data-filter="all">All</button>
+        <button class="pill-tab" data-filter="languages">Languages</button>
+        <button class="pill-tab" data-filter="software">Software</button>
+        <button class="pill-tab" data-filter="presentations">Presentations</button>
+        <button class="pill-tab" data-filter="study">Study Support</button>
       </div>
     </section>
 
-    <!-- SAMPLE SKILL CARDS -->
+    <!-- SAMPLE CARDS -->
     <section class="section">
-      <h2 class="section-title">Sample skills “offered” in the prototype</h2>
+      <h2 class="section-title">Sample Skills Offered</h2>
       <p class="section-sub">
-        These example cards show how students’ offers could appear on the Skill Board.
-        Names, faculties, and skills are placeholders for the presentation.
+        These samples show what a real Skill Board could look like once Skill Swap is live on campus.
+        Cards here are placeholders for the MGT401 presentation.
       </p>
 
       <div class="grid-3">
-        <!-- CARD 1 -->
-        <article class="card skill-card">
+
+        <!-- CARD 1 – LANGUAGES -->
+        <article class="card skill-card" data-category="languages">
           <div class="skill-header">
-            <h3>French Conversation (B2)</h3>
-            <span class="skill-tag">Languages</span>
+            <h3>💬 French Conversation (B2)</h3>
+            <span class="skill-tag" style="background:#eef2ff; color:#4338ca;">
+              Languages
+            </span>
           </div>
-          <p class="skill-meta">
-            <strong>Offered by:</strong> LAU student – Arts & Sciences
-          </p>
+          <p class="skill-meta"><strong>Offered by:</strong> LAU student – Arts & Sciences</p>
           <p class="skill-text">
             1-to-1 French practice for oral exams, presentations, and everyday conversation.
           </p>
-          <p class="skill-meta">
-            <strong>Wants to learn:</strong> Excel basics or Canva for presentations
-          </p>
-          <p class="skill-meta">
-            <strong>Format:</strong> On campus or online · 1h sessions
-          </p>
+          <p class="skill-meta"><strong>Wants to learn:</strong> Excel basics or Canva for presentations</p>
+          <p class="skill-meta"><strong>Format:</strong> On campus or online · 1h sessions</p>
         </article>
 
-        <!-- CARD 2 -->
-        <article class="card skill-card">
+        <!-- CARD 2 – SOFTWARE -->
+        <article class="card skill-card" data-category="software">
           <div class="skill-header">
-            <h3>Excel & Basic Data Analysis</h3>
-            <span class="skill-tag">Software</span>
+            <h3>📊 Excel & Basic Data Analysis</h3>
+            <span class="skill-tag" style="background:#ecfdf5; color:#166534;">
+              Software
+            </span>
           </div>
-          <p class="skill-meta">
-            <strong>Offered by:</strong> Business student
-          </p>
+          <p class="skill-meta"><strong>Offered by:</strong> Business student</p>
           <p class="skill-text">
             Help with formulas, tables, and organizing data for projects and reports.
           </p>
-          <p class="skill-meta">
-            <strong>Wants to learn:</strong> Academic writing or SPSS intro
-          </p>
-          <p class="skill-meta">
-            <strong>Format:</strong> Library study rooms · 1–2h swaps
-          </p>
+          <p class="skill-meta"><strong>Wants to learn:</strong> Academic writing or SPSS intro</p>
+          <p class="skill-meta"><strong>Format:</strong> Library study rooms · 1–2h swaps</p>
         </article>
 
-        <!-- CARD 3 -->
-        <article class="card skill-card">
+        <!-- CARD 3 – PRESENTATIONS -->
+        <article class="card skill-card" data-category="presentations">
           <div class="skill-header">
-            <h3>Presentation Design & Public Speaking</h3>
-            <span class="skill-tag">Presentations</span>
+            <h3>🎤 Presentation Design & Public Speaking</h3>
+            <span class="skill-tag" style="background:#fdf2ff; color:#a21caf;">
+              Presentations
+            </span>
           </div>
-          <p class="skill-meta">
-            <strong>Offered by:</strong> Interior Architecture student
-          </p>
+          <p class="skill-meta"><strong>Offered by:</strong> Interior Architecture student</p>
           <p class="skill-text">
             Support with structuring slides, visual design, and practicing presentations.
           </p>
-          <p class="skill-meta">
-            <strong>Wants to learn:</strong> Photoshop basics or AutoCAD tips
-          </p>
-          <p class="skill-meta">
-            <strong>Format:</strong> In person · small groups or 1-to-1
-          </p>
+          <p class="skill-meta"><strong>Wants to learn:</strong> Photoshop basics or AutoCAD tips</p>
+          <p class="skill-meta"><strong>Format:</strong> In person · small groups or 1-to-1</p>
         </article>
 
-        <!-- CARD 4 -->
-        <article class="card skill-card">
+        <!-- CARD 4 – SOFTWARE -->
+        <article class="card skill-card" data-category="software">
           <div class="skill-header">
-            <h3>SPSS Intro for Psych & Education</h3>
-            <span class="skill-tag">Software</span>
+            <h3>🧪 SPSS Intro for Psych & Education</h3>
+            <span class="skill-tag" style="background:#ecfdf5; color:#166534;">
+              Software
+            </span>
           </div>
-          <p class="skill-meta">
-            <strong>Offered by:</strong> Psychology student
-          </p>
+          <p class="skill-meta"><strong>Offered by:</strong> Psychology student</p>
           <p class="skill-text">
-            Step-by-step support with entering data, running basic tests, and reading outputs.
+            Step-by-step support with entering data, running basic tests, and reading SPSS outputs.
           </p>
-          <p class="skill-meta">
-            <strong>Wants to learn:</strong> Graphic design or Italian basics
-          </p>
-          <p class="skill-meta">
-            <strong>Format:</strong> Online (Teams/Zoom) · screen sharing
-          </p>
+          <p class="skill-meta"><strong>Wants to learn:</strong> Graphic design or Italian basics</p>
+          <p class="skill-meta"><strong>Format:</strong> Online (Teams/Zoom) · screen sharing</p>
         </article>
 
-        <!-- CARD 5 -->
-        <article class="card skill-card">
+        <!-- CARD 5 – STUDY SUPPORT -->
+        <article class="card skill-card" data-category="study">
           <div class="skill-header">
-            <h3>Study Planning & Time Management</h3>
-            <span class="skill-tag">Study Support</span>
+            <h3>🧠 Study Planning & Time Management</h3>
+            <span class="skill-tag" style="background:#eff6ff; color:#1d4ed8;">
+              Study Support
+            </span>
           </div>
-          <p class="skill-meta">
-            <strong>Offered by:</strong> Student mentor
-          </p>
+          <p class="skill-meta"><strong>Offered by:</strong> Student mentor</p>
           <p class="skill-text">
-            Help with building weekly study plans, breaking down deadlines, and avoiding last-minute stress.
+            Weekly study plans, breaking down deadlines, and reducing last-minute stress.
           </p>
-          <p class="skill-meta">
-            <strong>Wants to learn:</strong> Advanced PowerPoint or AutoCAD
-          </p>
-          <p class="skill-meta">
-            <strong>Format:</strong> On campus · 1h planning sessions
-          </p>
+          <p class="skill-meta"><strong>Wants to learn:</strong> Advanced PowerPoint or AutoCAD</p>
+          <p class="skill-meta"><strong>Format:</strong> On campus · 1h planning sessions</p>
         </article>
 
-        <!-- CARD 6 -->
-        <article class="card skill-card">
+        <!-- CARD 6 – PRESENTATIONS -->
+        <article class="card skill-card" data-category="presentations">
           <div class="skill-header">
-            <h3>Canva & Visual Posters for Clubs</h3>
-            <span class="skill-tag">Presentations</span>
+            <h3>🖼️ Canva & Visual Posters for Clubs</h3>
+            <span class="skill-tag" style="background:#fdf2ff; color:#a21caf;">
+              Presentations
+            </span>
           </div>
-          <p class="skill-meta">
-            <strong>Offered by:</strong> Design-oriented student
-          </p>
+          <p class="skill-meta"><strong>Offered by:</strong> Design-oriented student</p>
           <p class="skill-text">
             Creating social media posts, event posters, and simple branding kits using free tools.
           </p>
-          <p class="skill-meta">
-            <strong>Wants to learn:</strong> Statistics or academic reading strategies
-          </p>
-          <p class="skill-meta">
-            <strong>Format:</strong> Flexible · online or on campus
-          </p>
+          <p class="skill-meta"><strong>Wants to learn:</strong> Statistics or academic reading strategies</p>
+          <p class="skill-meta"><strong>Format:</strong> Flexible · online or on campus</p>
         </article>
+
       </div>
 
-      <p class="section-sub" style="margin-top:1.2rem;">
-        In the full Skill Swap system, each card would be automatically created from the Join form
+      <!-- NO RESULTS MESSAGE -->
+      <p id="noResults" class="section-sub" style="margin-top:1.2rem; display:none;">
+        No skills match your search and filter yet. Try clearing the search or choosing “All”.
+      </p>
+
+      <p class="section-sub" style="margin-top:0.6rem;">
+        In a full Skill Swap system, each card would be automatically generated from the Join form
         and stored in a shared database or Google Sheet for all LAU students to browse.
       </p>
     </section>
   </div>
 
+  <!-- FOOTER -->
   <footer>
-    Skill Swap – LAU MGT401 Prototype · Yara Arakji · Nour Issa · Omar Rifaii · Samir Aridi · 2025
+    Skill Swap – LAU MGT401 · Yara Arakji · Nour Issa · Omar Rifaii · Samir Aridi · 2025
   </footer>
 
+  <!-- SCRIPTS: SEARCH + FILTERS -->
   <script>
-  function toggleTheme() {
-    document.body.classList.toggle('dark');
-  }
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
 
-  // SIMPLE SEARCH FILTER FOR SKILL CARDS
-  document.addEventListener('DOMContentLoaded', () => {
-    const searchInput = document.querySelector('.search-input');
-    const cards = document.querySelectorAll('.skill-card');
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.querySelector('.search-input');
+      const cards = document.querySelectorAll('.skill-card');
+      const pills = document.querySelectorAll('.pill-tab');
+      const noResults = document.getElementById('noResults');
 
-    if (!searchInput || !cards.length) return;
+      let activeFilter = 'all';
 
-    searchInput.addEventListener('input', () => {
-      const query = searchInput.value.toLowerCase().trim();
+      function applyFilters() {
+        const query = searchInput.value.toLowerCase().trim();
+        let visibleCount = 0;
 
-      cards.forEach(card => {
-        const text = card.innerText.toLowerCase();
+        cards.forEach(card => {
+          const text = card.innerText.toLowerCase();
+          const category = card.dataset.category;
 
-        if (!query || text.includes(query)) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
+          const matchText = !query || text.includes(query);
+          const matchFilter = (activeFilter === 'all') || (category === activeFilter);
+
+          if (matchText && matchFilter) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (noResults) {
+          noResults.style.display = visibleCount === 0 ? 'block' : 'none';
         }
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', applyFilters);
+      }
+
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          activeFilter = pill.dataset.filter || 'all';
+
+          pills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+
+          applyFilters();
+        });
       });
+
+      // Initial state
+      applyFilters();
     });
-  });
-</script>
+  </script>
+
 </body>
 </html>
