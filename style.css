@@ -694,3 +694,17 @@ body.dark footer {
     bottom: 16px;
   }
 }
+/* HERO LOGO */
+.hero-logo {
+    text-align: center;
+    margin: 1.2rem 0 1.4rem 0;
+}
+
+.hero-logo img {
+    width: 140px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
