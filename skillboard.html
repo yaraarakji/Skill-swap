@@ -3,23 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Skill Board – Skill Swap</title>
-  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
   <!-- NAVBAR -->
   <div class="navbar">
     <div class="nav-inner">
       <div class="logo-wrap">
         <a href="index.html">
-          <svg width="120" height="38" viewBox="0 0 220 60">
-            <circle cx="30" cy="30" r="26" fill="#5B3EE4" />
-            <path d="M22 23C23.8 18.5 29 16.5 33.5 18.3C36 19.3 37.9 21.5 38.6 23.9L41.5 22.2C41.9 22 42.3 22.3 42.2 22.7L40.8 28.3C40.7 28.7 40.3 28.9 39.9 28.8L34.3 27.4C33.9 27.3 33.9 26.7 34.3 26.5L37.1 25C36.5 23.5 35.4 22.1 33.8 21.5C31.1 20.4 28 21.6 26.8 24.3C26.6 24.7 26 24.8 25.5 24.6L23 23.5C22.5 23.3 21.8 23.2 22 23Z" fill="white"/>
-            <path d="M38 36.7C36.2 41.2 31 43.2 26.5 41.4C24 40.4 22.1 38.2 21.4 35.8L18.5 37.5C18.1 37.7 17.7 37.4 17.8 37L19.2 31.4C19.3 31 19.7 30.8 20.1 30.9L25.7 32.3C26.1 32.4 26.1 33 25.7 33.2L22.9 34.7C23.5 36.2 24.6 37.6 26.2 38.2C28.9 39.3 32 38.1 33.2 35.4C33.4 35 34 34.9 34.5 35.1L37 36.2C37.5 36.4 38.2 36.5 38 36.7Z" fill="#C7F2CB"/>
-            <text x="65" y="25" fill="#1F2937" font-size="14" font-weight="700">Skill Swap</text>
-          </svg>
+          <img src="logo.png" alt="Skill Swap Logo" style="height:40px; width:auto;">
         </a>
       </div>
 
@@ -43,101 +37,182 @@
     </div>
   </div>
 
-  <!-- SKILL BOARD CONTENT -->
   <div class="container">
-    <section class="section">
-      <h1 class="section-title">Skill Board</h1>
+    <!-- SKILL BOARD HERO -->
+    <section class="section skillboard-hero">
+      <h1 class="section-title">Skill Board (Prototype)</h1>
       <p class="section-sub">
-        This is a demo of how skills will appear once students submit the form.
-        Use the search box to filter by skill, type, or name.
+        This page shows how Skill Swap could display skills offered by LAU students.
+        For the MGT401 project, this is a front-end prototype – in a full version it would be connected
+        to a real database or Google Sheet.
       </p>
 
-      <div class="board-wrap">
-        <div class="board-header">
-          <h3>Available skills (prototype)</h3>
-          <input type="text" class="board-search" id="searchBox" placeholder="Search: French, Excel, AutoCAD...">
-        </div>
-
-        <!-- Legend -->
-        <div style="padding:.5rem 1rem; font-size:.75rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:.4rem;">
-          <span><strong>Columns:</strong> Skill • Who offers it • Category</span>
-          <span><strong>Note:</strong> Contact via Instagram / email shared in the Join form.</span>
-        </div>
-
-        <div id="boardRows">
-
-          <!-- Row 1 -->
-          <div class="board-row">
-            <div><strong>French Conversation</strong><br><span style="font-size:.75rem;color:var(--muted);">Practice speaking for oral exams.</span></div>
-            <div>Offered by: Maya · @maya.lau</div>
-            <div><span class="tag">Language</span></div>
-          </div>
-
-          <!-- Row 2 -->
-          <div class="board-row">
-            <div><strong>Excel Basics</strong><br><span style="font-size:.75rem;color:var(--muted);">Formulas, charts, and tables for business courses.</span></div>
-            <div>Offered by: Karim · @karim.excel</div>
-            <div><span class="tag">Software</span></div>
-          </div>
-
-          <!-- Row 3 -->
-          <div class="board-row">
-            <div><strong>AutoCAD Drafting</strong><br><span style="font-size:.75rem;color:var(--muted);">Plans, layers, and printing tips.</span></div>
-            <div>Offered by: Rana · @rana.arc</div>
-            <div><span class="tag">Software</span></div>
-          </div>
-
-          <!-- Row 4 -->
-          <div class="board-row">
-            <div><strong>Essay Editing</strong><br><span style="font-size:.75rem;color:var(--muted);">Structure, clarity, and grammar for assignments.</span></div>
-            <div>Offered by: Nour · @nour.writes</div>
-            <div><span class="tag">Academic</span></div>
-          </div>
-
-          <!-- Row 5 -->
-          <div class="board-row">
-            <div><strong>Statistics Tutoring</strong><br><span style="font-size:.75rem;color:var(--muted);">Basic stats, SPSS outputs, and interpretation.</span></div>
-            <div>Offered by: Omar · @omar.stats</div>
-            <div><span class="tag">Academic</span></div>
-          </div>
-
-          <!-- Row 6 -->
-          <div class="board-row">
-            <div><strong>Presentation Coaching</strong><br><span style="font-size:.75rem;color:var(--muted);">Slides, timing, and confidence for class presentations.</span></div>
-            <div>Offered by: Samir · @samir.present</div>
-            <div><span class="tag">Soft Skill</span></div>
-          </div>
-
-        </div>
+      <div class="search-row">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search skills (e.g., Excel, French, SPSS, presentations)…"
+          disabled
+        >
+        <span class="search-note">
+          Prototype view – search and filters are not active yet. They illustrate the future design.
+        </span>
       </div>
 
-      <p style="margin-top:1rem; font-size:.8rem; color:var(--muted);">
-        In a future version, these rows would be loaded automatically from a Google Sheet or database
-        whenever a student submits the Join form.
+      <div class="pill-tabs">
+        <button class="pill-tab active">All</button>
+        <button class="pill-tab">Languages</button>
+        <button class="pill-tab">Software</button>
+        <button class="pill-tab">Presentations</button>
+        <button class="pill-tab">Study Support</button>
+      </div>
+    </section>
+
+    <!-- SAMPLE SKILL CARDS -->
+    <section class="section">
+      <h2 class="section-title">Sample skills “offered” in the prototype</h2>
+      <p class="section-sub">
+        These example cards show how students’ offers could appear on the Skill Board.
+        Names, faculties, and skills are placeholders for the presentation.
+      </p>
+
+      <div class="grid-3">
+        <!-- CARD 1 -->
+        <article class="card skill-card">
+          <div class="skill-header">
+            <h3>French Conversation (B2)</h3>
+            <span class="skill-tag">Languages</span>
+          </div>
+          <p class="skill-meta">
+            <strong>Offered by:</strong> LAU student – Arts & Sciences
+          </p>
+          <p class="skill-text">
+            1-to-1 French practice for oral exams, presentations, and everyday conversation.
+          </p>
+          <p class="skill-meta">
+            <strong>Wants to learn:</strong> Excel basics or Canva for presentations
+          </p>
+          <p class="skill-meta">
+            <strong>Format:</strong> On campus or online · 1h sessions
+          </p>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="card skill-card">
+          <div class="skill-header">
+            <h3>Excel & Basic Data Analysis</h3>
+            <span class="skill-tag">Software</span>
+          </div>
+          <p class="skill-meta">
+            <strong>Offered by:</strong> Business student
+          </p>
+          <p class="skill-text">
+            Help with formulas, tables, and organizing data for projects and reports.
+          </p>
+          <p class="skill-meta">
+            <strong>Wants to learn:</strong> Academic writing or SPSS intro
+          </p>
+          <p class="skill-meta">
+            <strong>Format:</strong> Library study rooms · 1–2h swaps
+          </p>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="card skill-card">
+          <div class="skill-header">
+            <h3>Presentation Design & Public Speaking</h3>
+            <span class="skill-tag">Presentations</span>
+          </div>
+          <p class="skill-meta">
+            <strong>Offered by:</strong> Interior Architecture student
+          </p>
+          <p class="skill-text">
+            Support with structuring slides, visual design, and practicing presentations.
+          </p>
+          <p class="skill-meta">
+            <strong>Wants to learn:</strong> Photoshop basics or AutoCAD tips
+          </p>
+          <p class="skill-meta">
+            <strong>Format:</strong> In person · small groups or 1-to-1
+          </p>
+        </article>
+
+        <!-- CARD 4 -->
+        <article class="card skill-card">
+          <div class="skill-header">
+            <h3>SPSS Intro for Psych & Education</h3>
+            <span class="skill-tag">Software</span>
+          </div>
+          <p class="skill-meta">
+            <strong>Offered by:</strong> Psychology student
+          </p>
+          <p class="skill-text">
+            Step-by-step support with entering data, running basic tests, and reading outputs.
+          </p>
+          <p class="skill-meta">
+            <strong>Wants to learn:</strong> Graphic design or Italian basics
+          </p>
+          <p class="skill-meta">
+            <strong>Format:</strong> Online (Teams/Zoom) · screen sharing
+          </p>
+        </article>
+
+        <!-- CARD 5 -->
+        <article class="card skill-card">
+          <div class="skill-header">
+            <h3>Study Planning & Time Management</h3>
+            <span class="skill-tag">Study Support</span>
+          </div>
+          <p class="skill-meta">
+            <strong>Offered by:</strong> Student mentor
+          </p>
+          <p class="skill-text">
+            Help with building weekly study plans, breaking down deadlines, and avoiding last-minute stress.
+          </p>
+          <p class="skill-meta">
+            <strong>Wants to learn:</strong> Advanced PowerPoint or AutoCAD
+          </p>
+          <p class="skill-meta">
+            <strong>Format:</strong> On campus · 1h planning sessions
+          </p>
+        </article>
+
+        <!-- CARD 6 -->
+        <article class="card skill-card">
+          <div class="skill-header">
+            <h3>Canva & Visual Posters for Clubs</h3>
+            <span class="skill-tag">Presentations</span>
+          </div>
+          <p class="skill-meta">
+            <strong>Offered by:</strong> Design-oriented student
+          </p>
+          <p class="skill-text">
+            Creating social media posts, event posters, and simple branding kits using free tools.
+          </p>
+          <p class="skill-meta">
+            <strong>Wants to learn:</strong> Statistics or academic reading strategies
+          </p>
+          <p class="skill-meta">
+            <strong>Format:</strong> Flexible · online or on campus
+          </p>
+        </article>
+      </div>
+
+      <p class="section-sub" style="margin-top:1.2rem;">
+        In the full Skill Swap system, each card would be automatically created from the Join form
+        and stored in a shared database or Google Sheet for all LAU students to browse.
       </p>
     </section>
   </div>
 
   <footer>
-    Skill Swap – LAU MGT401 Project · 2025
+    Skill Swap – LAU MGT401 Prototype · Yara Arakji · Nour Issa · Omar Rifaii · Samir Aridi · 2025
   </footer>
 
   <script>
-    // Search filter logic
-    const searchBox = document.getElementById("searchBox");
-    const rows = document.querySelectorAll(".board-row");
-
-    searchBox.addEventListener("input", function () {
-      const q = searchBox.value.toLowerCase();
-      rows.forEach(row => {
-        row.style.display = row.textContent.toLowerCase().includes(q) ? "" : "none";
-      });
-    });
-
     function toggleTheme() {
       document.body.classList.toggle('dark');
     }
   </script>
-
 </body>
 </html>
