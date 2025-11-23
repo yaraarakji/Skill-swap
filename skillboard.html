@@ -210,9 +210,31 @@
   </footer>
 
   <script>
-    function toggleTheme() {
-      document.body.classList.toggle('dark');
-    }
-  </script>
+  function toggleTheme() {
+    document.body.classList.toggle('dark');
+  }
+
+  // SIMPLE SEARCH FILTER FOR SKILL CARDS
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.querySelector('.search-input');
+    const cards = document.querySelectorAll('.skill-card');
+
+    if (!searchInput || !cards.length) return;
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase().trim();
+
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+
+        if (!query || text.includes(query)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
